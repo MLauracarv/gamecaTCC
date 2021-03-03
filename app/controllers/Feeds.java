@@ -54,7 +54,8 @@ public class Feeds extends Controller {
 	}
 
 	public static void detalhes(long idSalaVirtual, long idFeed) {
-		renderTemplate("Mensagens/Feed.html", idSalaVirtual, idFeed);
+		
+		renderTemplate("Mensagens/feed.html", idSalaVirtual, idFeed);
 	}
 
 }
