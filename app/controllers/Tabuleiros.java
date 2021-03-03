@@ -37,7 +37,8 @@ public class Tabuleiros extends Controller {
 	public static void indexTabuleiro(Long idSala) {
 		System.out.println("idSala que chega no indexTabuleiro "+idSala);
 		SalaVirtual sala = SalaVirtual.findById(idSala);
-		//System.out.println("sala que esta sendo renderizada no indexTabuleiro "+sala);
+		
+		System.out.println("sala que esta sendo renderizada no indexTabuleiro "+sala);
 		render(sala);
 	}
 
