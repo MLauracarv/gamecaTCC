@@ -140,7 +140,7 @@ var yellow = "#ffff00";
 			
             var pecas = [
                 /*Peças azuis*/
-                {i: 9, j: 9, color: blue, id: 0, pos: -1},
+                {i: 9, j: 9, color: blue, id: -1, pos: -1},
                 {i: 9, j: 14, color: blue, id: -1, pos: -1},
                 {i: 14, j: 9, color: blue, id: -1, pos: -1},
                 {i: 14, j: 14, color: blue, id: -1, pos: -1},
