@@ -38,7 +38,7 @@ public class Tabuleiros extends Controller {
 		System.out.println("idSala do indexTabuleiro "+idSala);
 		SalaVirtual sala = SalaVirtual.findById(idSala);
 		System.out.println("sala que esta sendo renderizada no indexTabuleiro "+sala);
-		render(sala);
+		renderTemplate("Tabuleiros/indexTabuleiro.html", sala);
 	}
 
 	public static void formTabuleiro(Long salaVirtual, Tabuleiro tabuleiro) {
