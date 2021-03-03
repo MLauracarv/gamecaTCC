@@ -35,7 +35,7 @@ public class Tabuleiros extends Controller {
 	}
 
 	public static void indexTabuleiro(Long idSala) {
-		//System.out.println("idSala do indexTabuleiro "+idSala);
+		System.out.println("idSala que chega no indexTabuleiro "+idSala);
 		SalaVirtual sala = SalaVirtual.findById(idSala);
 		//System.out.println("sala que esta sendo renderizada no indexTabuleiro "+sala);
 		render(sala);
@@ -44,14 +44,17 @@ public class Tabuleiros extends Controller {
 	public static void formTabuleiro(Long salaVirtual, Tabuleiro tabuleiro) {
 		Tabuleiro tabuleiro1 = Tabuleiro.find("idSalaVirtual = ?", salaVirtual).first();
 		SalaVirtual sala = SalaVirtual.findById(salaVirtual);
+		
 		if (tabuleiro1 == null) {
 			System.out.println("");
 			System.out.println("ESSE TABULEIRO NAO EXISTEEEE. entao vamos criar ");
 			System.out.println("");
 		} else {
+			long idSala = sala.id;
 			
-			System.out.println("Esse tabuleiro existe. n crie outro!");
-			renderTemplate("Tabuleiros/indexTabuleiro.html", sala);
+			System.out.println("Esse tabuleiro existe. n crie outro! E envie a idSala" +idSala);
+			Tabuleiros.indexTabuleiro(idSala);
+			//renderTemplate("Tabuleiros/indexTabuleiro.html", sala);
 		}
 		render(salaVirtual);
 	}
