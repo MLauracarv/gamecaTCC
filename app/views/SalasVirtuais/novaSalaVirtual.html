@@ -21,14 +21,18 @@
                             	  <a href="@{CentrosAprendizagem.ranking(teste = sala.id)}"><button type="button" style = "float: right" type="button" class="btn mb-1 btn-success">Ranking</button></a>
                                 <h4 class="card-title">Informações</h4>
                                 <!-- Nav tabs -->
-                                <ul class="nav nav-tabs mb-3" role="tablist">
-                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home8"><span><i class="ti-home"></i></span></a>
+                               <ul class="nav nav-tabs mb-3" role="tablist">
+                                    <li data-toggle="tooltip" data-placement="top" title="Informações gerais de sua sala" class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home8"><span><i class="ti-home"></i></span></a>  
+                                    <!--<style>a.tooltip{  position:relative;   font-size:12px;   color:#039;  text-decoration:none;  cursor:help;   }  a.tooltip:hover{  background:transparent;  color:#f00;  z-index:25;   }  a.tooltip span{display: none  }  a.tooltip:hover span{   display:block;  position:absolute;  width:210px;   top:20px;  left:0;  font-size: 12px;  padding:5px;  border:1px solid #999;  background:#e0ffff;   color:#000;  }</style></head><body><p>Este é exemplo demonstrativo de utilização de <a href="#" class="tooltip"><em><strong>Tooltips</em></strong><span>Exemplo de utilização de tooltips.</span></a> e com isto fornecer mais uma ferramenta para seu website.</p>-->
+                                    <div class="dica-de-navegacao" style="display:none"><h4>Botão para visualização de informações da sua sala</h4><br><p>Após você clicar nesse botão você poderá ver<br>os alunos que entraram em sua sala</p></div>
                                     </li>
-                                	<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile8"><span><i class="ti-user"></i></span></a>
+                                	<li data-toggle="tooltip" data-placement="top" title="Alunos inseridos em sua sala" class="nav-item"><a id="primeiro-item" class="nav-link" data-toggle="tab" href="#profile8"><span><i class="ti-user"></i></span></a>
+                                		<div class="dica-de-navegacao" style="display:none"><h4>Botão para visualização de alunos inscritos na sala</h4><br><p>Após você clicar nesse botão você poderá ver<br>informações gerais de sua sala como pódio, código, etc</p></div>
                                     </li>
-                                  	 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages8"><span><i class="ti-email"></i></span></a>
+                                  	 <li data-toggle="tooltip" data-placement="top" title="Criação de CAs e avaliação de alunos" class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages8"><span><i class="ti-email"></i></span></a>
+                                  	 	<div class="dica-de-navegacao" style="display:none"><h4>Botão para registro de CA e avaliação de alunos</h4><br><p>Após você clicar nesse botão você poderá agendar<br>Centros de aprendizagem e avaliar os alunos<br>que compareceram ou não no CA</p></div>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile7"><span><i class=""></i></span></a>
+                                    <li id="terceiro-item" class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile7"><span><i class=""></i></span></a>
                                     </li>
 
                                 </ul>
