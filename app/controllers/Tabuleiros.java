@@ -43,7 +43,7 @@ public class Tabuleiros extends Controller {
 
 	public static void formTabuleiro(Long salaVirtual, Tabuleiro tabuleiro) {
 		Tabuleiro tabuleiro1 = Tabuleiro.find("idSalaVirtual = ?", salaVirtual).first();
-		SalaVirtual sala = SalaVirtual.findById(salaVirtual).
+		SalaVirtual sala = SalaVirtual.findById(salaVirtual);
 		if (tabuleiro1 == null) {
 			System.out.println("");
 			System.out.println("ESSE TABULEIRO NAO EXISTEEEE. entao vamos criar ");
