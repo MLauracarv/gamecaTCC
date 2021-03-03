@@ -26,15 +26,7 @@
                                             <p><strong>Disciplina: </strong></p> <input type="text" name="s.disciplina" value="${flash['s.disciplina'] != null? flash['s.disciplina']:s?.disciplina}" class="form-control input-default" placeholder="Ex: História"></br>
                                              #{ifError 's.disciplina'}<p style = "color: red">#{error 's.disciplina' /}</p>#{/ifError}
                                            
-                                             <select> <p><strong>Dia da semana: </strong></p> <input type="text" name="s.dia" value="${flash['s.dia'] != null? flash['s.dia']:s?.dia}"class="form-control input-default" placeholder="Ex: Quarta"></br>
-                                             #{ifError 's.dia'}<p style = "color: red">
-                                             <!--qualquer coisa-->
-                                             <option value ="Segunda">Segunda</option>
-                                             <option value ="Terça">Terça</option>
-                                             <option value ="Quarta">Quarta</option>
-                                             <option value ="Quinta">Quinta</option>
-                                             <option value ="Sexta">Sexta</option>
-                                             </select>
+                                            
                                            
                                             
                                             <p><strong>Horário: </strong></p> <input type="time" name="s.horario" value="${flash['s.horario'] != null? flash['s.horario']:s?.horario}"  class="form-control input-default" placeholder="Ex: 16:30h"></br>
