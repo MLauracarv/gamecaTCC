@@ -332,22 +332,15 @@ public class SalasVirtuais extends Controller {
 			if (listarMensagens != null) {
 				for (int i = 0; i < listarMensagens.size(); i++) {
 					listarMensagens.get(i).delete();
-			}
+					}
 	
+			}
 		}
 		
 		//escluir tabuleiro
-		//Tabuleiro tabuleiro= Tabuleiro.find("idSalaVirtual= ?", id).first();
-		//if(tabuleiro != null) {
-		//	tabuleiro.delete();
-		//}
-		
-		List<Tabuleiro> tabuleiros= Tabuleiro.find("idSalaVirtual = ?", id).fetch();
-		if (tabuleiros != null) {
-			for (int i = 0; i < tabuleiros.size(); i++) {
-				tabuleiros.get(i).delete();
-				System.out.println(tabuleiros.get(i);
-			}
+		Tabuleiro tabuleiro= Tabuleiro.find("idSalaVirtual= ?", id).first();
+		if(tabuleiro != null) {
+			tabuleiro.delete();
 		}
 		
 		//excluir Cas
@@ -377,6 +370,17 @@ public class SalasVirtuais extends Controller {
 			}
 		}
 		
+		
+		
+		//comentario
+		/*List<Comentario> listarComentarios = Comentario.find("idMensagem = ?", id).fetch();
+		if (listarComentarios != null) {
+			for (int i = 0; i < listarComentarios.size(); i++) {
+				listarComentarios.get(i).delete();
+
+			}
+		}
+		*/
 		s.delete();
 		indexProfessores();
 	}
