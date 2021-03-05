@@ -326,6 +326,14 @@ public class SalasVirtuais extends Controller {
 		feed.delete();
 		}
 		
+		List <Feed> listarFeeds = Feed.find("idSalaVirtual = ?", id).fetch();
+		if(listarFeeds != null){
+			for (int i = 0; i < listarFeeds.size(); i++) {
+					listarFeeds.get(i).delete();
+			}
+			
+		}
+		
 		//excluir mensagens e comentarios
 		if(feed != null) {
 			List<Mensagem> listarMensagens= Mensagem.find("idFeed= ?", feed.id).fetch();
