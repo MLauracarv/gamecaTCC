@@ -378,17 +378,6 @@ public class SalasVirtuais extends Controller {
 			}
 		}
 		
-		
-		
-		//comentario
-		/*List<Comentario> listarComentarios = Comentario.find("idMensagem = ?", id).fetch();
-		if (listarComentarios != null) {
-			for (int i = 0; i < listarComentarios.size(); i++) {
-				listarComentarios.get(i).delete();
-
-			}
-		}
-		*/
 		s.delete();
 		indexProfessores();
 	}
