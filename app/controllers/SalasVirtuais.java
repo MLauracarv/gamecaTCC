@@ -332,9 +332,8 @@ public class SalasVirtuais extends Controller {
 			if (listarMensagens != null) {
 				for (int i = 0; i < listarMensagens.size(); i++) {
 					listarMensagens.get(i).delete();
-					}
-	
 			}
+	
 		}
 		
 		//escluir tabuleiro
