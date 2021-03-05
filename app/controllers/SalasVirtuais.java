@@ -338,9 +338,16 @@ public class SalasVirtuais extends Controller {
 		}
 		
 		//escluir tabuleiro
-		Tabuleiro tabuleiro= Tabuleiro.find("idSalaVirtual= ?", id).first();
-		if(tabuleiro != null) {
-			tabuleiro.delete();
+		//Tabuleiro tabuleiro= Tabuleiro.find("idSalaVirtual= ?", id).first();
+		//if(tabuleiro != null) {
+		//	tabuleiro.delete();
+		//}
+		
+		List <Tabuleiro> listarTabuleiros = Tabuleiro.find("idSalaVirtual = ?", id).fetch();
+		if(listarTabuleiros != null){
+			for(int i = 0; i < listarTabuleiros.size(); i++){
+				listarTabuleiros.get(i).delete();
+			}
 		}
 		
 		//excluir Cas
