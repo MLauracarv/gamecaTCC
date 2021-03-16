@@ -30,8 +30,11 @@ public class Professor extends Model{
 
 	@Required(message = "Inserção da senha é obrigatória")
 	@MinSize(value = 3, message = "A senha deve ter no mínimo 3 caracteres")
-	public String senha;
 	
+	public String senha;
+	public void setSenha() {
+		this.senha = Crypto.passwordHash(this.senha);
+	} 
 	//public TipoUsuario tipoUsuario;
 	
 	public Professor() {
