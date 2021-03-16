@@ -90,9 +90,9 @@ public class Aluno extends Model implements Comparable<Aluno>{
 			
 	}	
 	
-	public void setSenha() {
-		this.senha = Crypto.passwordHash(this.senha);
-	} 
+	//public void setSenha() {
+	//	this.senha = Crypto.passwordHash(this.senha);
+	//} 
 	
 	
 }
