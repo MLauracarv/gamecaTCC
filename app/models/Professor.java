@@ -46,9 +46,9 @@ public class Professor extends Model{
 	@JoinColumn(name="idSalaVirtual")
 	public List <CentroAprendizagem> centrosAprendizagem;
 	
-	public void setSenha() {
-		this.senha = Crypto.passwordHash(this.senha);
-	} 
+	//public void setSenha() {
+	//	this.senha = Crypto.passwordHash(this.senha);
+	//} 
 	
 	//@ManyToMany(mappedBy="professores")
 	//public List<SalaVirtual> salasVirtuais;
