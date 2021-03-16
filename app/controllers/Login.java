@@ -13,9 +13,11 @@ public class Login extends Controller {
 	}
 
 	public static void autenticar(String email, String senha) {
+		Professor professor= Professor.find("email = ? and senha = ?", email , Crypto.passwordHash(senha)).first();
+		 Aluno aluno = Aluno.find("email = ? and senha = ?", email ,  Crypto.passwordHash(senha)).first();
 
-		Professor professor = Professor.find("email = ? and senha = ?", email, senha).first();
-		Aluno aluno = Aluno.find("email = ? and senha = ?", email, senha).first();
+		//Professor professor = Professor.find("email = ? and senha = ?", email, senha).first();
+		//Aluno aluno = Aluno.find("email = ? and senha = ?", email, senha).first();
 		
 		validation.required(email);
 		validation.email(email);
