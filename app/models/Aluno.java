@@ -40,7 +40,13 @@ public class Aluno extends Model implements Comparable<Aluno>{
 	
 	@Required
 	@MinSize(value = 3, message = "A senha deve ter no mínimo 3 caracteres")
+	
 	public String senha;
+	
+	public void setSenha() {
+		this.senha = Crypto.passwordHash(this.senha);
+	} 
+	
 	
 	public int pontos;
 	
