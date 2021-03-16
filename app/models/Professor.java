@@ -32,9 +32,7 @@ public class Professor extends Model{
 	@MinSize(value = 3, message = "A senha deve ter no mínimo 3 caracteres")
 	
 	public String senha;
-	public void setSenha() {
-		this.senha = Crypto.passwordHash(this.senha);
-	} 
+	
 	//public TipoUsuario tipoUsuario;
 	
 	public Professor() {
@@ -48,6 +46,9 @@ public class Professor extends Model{
 	@JoinColumn(name="idSalaVirtual")
 	public List <CentroAprendizagem> centrosAprendizagem;
 	
+	public void setSenha() {
+		this.senha = Crypto.passwordHash(this.senha);
+	} 
 	
 	//@ManyToMany(mappedBy="professores")
 	//public List<SalaVirtual> salasVirtuais;
