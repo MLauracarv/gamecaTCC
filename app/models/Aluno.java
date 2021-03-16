@@ -43,10 +43,6 @@ public class Aluno extends Model implements Comparable<Aluno>{
 	
 	public String senha;
 	
-	public void setSenha() {
-		this.senha = Crypto.passwordHash(this.senha);
-	} 
-	
 	
 	public int pontos;
 	
@@ -94,7 +90,9 @@ public class Aluno extends Model implements Comparable<Aluno>{
 			
 	}	
 	
-	
+	public void setSenha() {
+		this.senha = Crypto.passwordHash(this.senha);
+	} 
 	
 	
 }
